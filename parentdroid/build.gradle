@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "parentalcontrol.parent"
+        minSdkVersion 15
+        targetSdkVersion 18
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dependencies {
+        implementation group: 'javax.activation', name: 'activation', version: '1.1'
+        implementation group: 'javax.mail', name: 'mail', version: '1.4.1'
+        implementation 'androidx.appcompat:appcompat:1.1.0'
+    }
+}

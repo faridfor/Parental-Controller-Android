@@ -1,0 +1,3 @@
+rootProject.name='ParentalControl'
+include ':childroid'
+include ':parentdroid'
